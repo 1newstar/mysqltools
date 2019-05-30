@@ -14,9 +14,10 @@ mtls_apr: apr-1.6.2.tar.gz
 mtls_apr_util: apr-util-1.6.0.tar.gz
 mtls_httpd: httpd-2.4.28.tar.gz
 mtls_php: php-5.6.31.tar.gz
-mtls_zabbix: zabbix-3.4.3.tar.gz
+#mtls_zabbix: zabbix-3.4.3.tar.gz
+mtls_zabbix: zabbix-4.0.0.tar.gz
 mtls_python: python-3.6.2.tar.xz
-mtls_mysql_connector_python: mysql-connector-python-2.1.5.tar.gz
+mtls_mysql_connector_python: mysql_connector_python-8.0.12-cp36-cp36m-manylinux1_x86_64.whl
 mtls_mycat: mycat-server-1.6.5-linux.tar.gz
 mtls_mha_node: mhanode.tar.gz
 mtls_mha_manager: mhamanager.tar.gz
@@ -24,6 +25,7 @@ mtls_git: git-2.9.5.tar.gz
 mtls_nginx: nginx-1.13.7.tar.gz
 mtls_sysbench: sysbench-1.1.0.tar.gz
 mtls_meb: meb-4.1.0-linux-glibc2.5-x86-64bit.tar.gz
+mtls_xtrb: percona-xtrabackup-2.4.9-Linux-x86_64.tar.gz
 mtls_mysqlclient: mysqlclient-1.3.12.tar.gz
 mtls_pytz: pytz-2018.4.tar.gz
 mtls_django: django-2.0.4.tar.gz
@@ -46,7 +48,9 @@ mtls_with_mysql_group_replication: 0
 #mysql 安装包所在的目录
 mysql_packages_dir: /Users/jianglexing/Softwares/mysql/
 #mysql 安装包的名字
-mysql_package: mysql-8.0.11-linux-glibc2.12-x86_64.tar.gz
+#mysql_package: mysql-5.6.44-linux-glibc2.12-x86_64.tar.gz
+#mysql_package: mysql-5.7.26-linux-glibc2.12-x86_64.tar.gz
+mysql_package: mysql-8.0.16-linux-glibc2.12-x86_64.tar.xz
 #linux 系统级别mysql用户相关信息
 mysql_user: mysql
 mysql_group: mysql
@@ -67,8 +71,8 @@ mysql_app_user: appuser
 mysql_app_password: mtls0352
 mysql_monitor_user: monitor
 mysql_monitor_password: monitor0352
-mysql_backup_user: backuper
-mysql_backup_password: backuper0352
+mysql_backup_user: backup
+mysql_backup_password: DX3906
 #mysql 配置文件模版
 mysql_binlog_format: row
 mysql_innodb_log_files_in_group: 16
@@ -81,12 +85,13 @@ mysql_sync_binlog: 1
 mysql_binlog_cache_size: 64K
 mysql_innodb_online_alter_log_max_size: 128M
 mysql_performance_schema: 'on'
+use_write_set: 1
 
 #mysql 
 
 ####
 #### zabbix 相关的配置
 #####
-zabbix_server_ip: 172.16.192.101
+zabbix_server_ip: 172.16.192.100 
 
 

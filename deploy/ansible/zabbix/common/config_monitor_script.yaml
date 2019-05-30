@@ -1,19 +1,15 @@
 ---
-  - name: transfer monitor script to remonte host
+  - name: transfer mtls.conf to remonte
     copy:
-     src: "{{mtls_base_dir + 'mysqltoolsclient' }}"
-     dest: /usr/local/zabbix/share/zabbix/externalscripts/
-     directory_mode: yes
+     src: ../template/mtls.conf
+     dest: /usr/local/zabbix/etc/zabbix_agentd.conf.d/
      group: zabbix
      owner: zabbix
-     mode: u+rw,g-wx,o-rwx
 
-  - name: config file mode
+  - name: config mtls.conf's mode
     file:
-     dest: /usr/local/zabbix/share/zabbix/externalscripts
-     group: zabbix
-     owner: zabbix
-     mode: 0755
-     recurse: yes
+     dest: /usr/local/zabbix/etc/zabbix_agentd.conf.d/mtls.conf
+     mode: 0644
+
 ...
 
